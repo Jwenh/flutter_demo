@@ -17,6 +17,7 @@ class _DevicePageState extends State<DevicePage> {
     this._getDevice();
   }
 
+//获取设备信息
   _getDevice() async {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
