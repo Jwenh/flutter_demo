@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import '../pages/Tabs.dart';
 import '../pages/News.dart';
+import '../pages/NewsContent.dart';
+import '../pages/Device.dart';
 
-final routes = {'/': (context) => Tabs(), '/news': (context) => NewsPage()};
+//配置路由
+final routes = {
+  '/': (context) => Tabs(),
+  '/news': (context) => NewsPage(),
+  '/newscontent': (context, {arguments}) => NewsContent(arguments: arguments),
+  '/device': (context) => DevicePage(),
+};
 //固定写法
 var onGenerateRoute = (RouteSettings settings) {
-  final String name = settings.name; // 路由路径 '/'
-  final Function pageContentBuilder = routes[name]; // 路径对应的方法
+  // 统一处理
+  final String name = settings.name;
+  print(settings);
+  final Function pageContentBuilder = routes[name];
   if (pageContentBuilder != null) {
     if (settings.arguments != null) {
-      //路由有arguments传参
       final Route route = MaterialPageRoute(
           builder: (context) =>
               pageContentBuilder(context, arguments: settings.arguments));

@@ -19,6 +19,11 @@ class _HomePageState extends State<HomePage> {
             child: Text('跳转到上拉分页加载更多页面'),
             onPressed: () {
               Navigator.pushNamed(context, '/news');
+            }),
+        RaisedButton(
+            child: Text('Device 获取设备信息'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/device');
             })
       ],
     ));
