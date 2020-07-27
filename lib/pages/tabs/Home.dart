@@ -37,6 +37,12 @@ class _HomePageState extends State<HomePage> {
             child: Text('网络监听'),
             onPressed: () {
               Navigator.pushNamed(context, '/network');
+            }),
+        SizedBox(height: 20),
+        RaisedButton(
+            child: Text('本地存储'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/storage');
             })
       ],
     ));
