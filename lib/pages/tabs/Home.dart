@@ -20,10 +20,23 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.pushNamed(context, '/news');
             }),
+        SizedBox(height: 20),
         RaisedButton(
             child: Text('Device 获取设备信息'),
             onPressed: () {
               Navigator.pushNamed(context, '/device');
+            }),
+        SizedBox(height: 20),
+        RaisedButton(
+            child: Text('video_player+chewie播放视频'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/chewieVideo');
+            }),
+        SizedBox(height: 20),
+        RaisedButton(
+            child: Text('网络监听'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/network');
             })
       ],
     ));

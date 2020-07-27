@@ -3,6 +3,8 @@ import '../pages/Tabs.dart';
 import '../pages/News.dart';
 import '../pages/NewsContent.dart';
 import '../pages/Device.dart';
+import '../pages/ChewieVideo.dart';
+import '../pages/NetworkPage.dart';
 
 //配置路由
 final routes = {
@@ -10,6 +12,8 @@ final routes = {
   '/news': (context) => NewsPage(),
   '/newscontent': (context, {arguments}) => NewsContent(arguments: arguments),
   '/device': (context) => DevicePage(),
+  '/chewieVideo': (context) => ChewieVideo(),
+  '/network': (context) => NetworkPage()
 };
 //固定写法
 var onGenerateRoute = (RouteSettings settings) {
