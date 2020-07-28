@@ -36,7 +36,7 @@ class _NewsPageState extends State<NewsPage> {
   void _getData() async {
     if (this.hasMore) {
       var apiUrl =
-          "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=${_page}";
+          "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=$_page";
 
       var response = await Dio().get(apiUrl);
       var res = json.decode(response.data)["result"];

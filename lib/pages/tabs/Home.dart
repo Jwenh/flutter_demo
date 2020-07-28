@@ -26,6 +26,12 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.pushNamed(context, '/scan');
             }),
+        SizedBox(height: 20),
+        RaisedButton(
+            child: Text('app升级'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/appversion');
+            }),
       ],
     ));
   }
