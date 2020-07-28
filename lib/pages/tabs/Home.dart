@@ -22,28 +22,10 @@ class _HomePageState extends State<HomePage> {
             }),
         SizedBox(height: 20),
         RaisedButton(
-            child: Text('Device 获取设备信息'),
+            child: Text('扫一扫'),
             onPressed: () {
-              Navigator.pushNamed(context, '/device');
+              Navigator.pushNamed(context, '/scan');
             }),
-        SizedBox(height: 20),
-        RaisedButton(
-            child: Text('video_player+chewie播放视频'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/chewieVideo');
-            }),
-        SizedBox(height: 20),
-        RaisedButton(
-            child: Text('网络监听'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/network');
-            }),
-        SizedBox(height: 20),
-        RaisedButton(
-            child: Text('本地存储'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/storage');
-            })
       ],
     ));
   }
